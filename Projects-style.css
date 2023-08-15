@@ -1,0 +1,71 @@
+.projects {
+    display: block;
+    width: 100%;
+    padding: 2%;
+}
+
+.project {
+    width: 96%;
+    margin: 2%;
+    padding: 2%;
+    background: rgba(32, 17, 17, 0.842);
+    border-radius: 15px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
+}
+
+.project span {
+    color: orange;
+    font-size: 1.5em;
+}
+
+.sub-project{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 2%;
+}
+
+.project-content{
+    color: white;
+    width: 60%;
+}
+
+.project-content p{
+    padding: 1% 0 0 0;
+}
+
+.project-image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+}
+
+.project-image img{
+    width: 90%;
+    border-radius: 10px;
+    box-shadow: 1px 1px 20px black;
+}
+
+.contactPage{
+    display: none;
+}
+
+.contactPage.active{
+    display: block;
+}
+
+@media only screen and (max-width: 768px){
+    .sub-project{
+        flex-direction: column;
+    }
+    .project-content{
+        width: 100%;
+        
+    }
+    .project-image{
+        width: 100%;
+        margin: 3% 0;
+    }
+}

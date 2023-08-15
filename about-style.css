@@ -1,0 +1,33 @@
+.about-heading {
+    width: 100%;
+    padding: 5px;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: white;
+}
+
+.about-subsection {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    margin: 2% auto;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
+
+}
+
+.about-subsection p{
+    font-size: large;
+    font-weight: normal;
+}
+
+.sub {
+    width: 200px;
+    height: 200px;
+    margin: 1%;
+    border-radius: 20px;
+    /* background: rgba(12, 7, 7, 0.842); */
+    background: rgba(32, 17, 17, 0.842);
+    box-shadow: 0 0 2px black;
+}
