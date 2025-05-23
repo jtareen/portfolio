@@ -1,0 +1,30 @@
+@import "tailwindcss";
+
+
+@theme {
+  --color-primary: oklch(0.6947 0.164 318.63);
+  --color-gray: oklch(0.7621 0.0202 262.99);
+  --color-background: oklch(0.2921 0.014 261.7);
+  --color-white: oklch(1 0 0);
+
+  --font-fira-code: FiraCode, monospace;
+}
+
+
+
+  /* Only your 4 colors
+  
+
+  Optional: keep these for layout consistency
+  --radius-selector: 0rem;
+  --radius-field: 0rem;
+  --radius-box: 0rem;
+
+  --size-selector: 0.25rem;
+  --size-field: 0.25rem;
+
+  --border: 1px;
+
+  --depth: 1;
+  --noise: 0; */
+
