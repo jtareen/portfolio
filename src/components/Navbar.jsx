@@ -7,6 +7,7 @@ import ChevronUp from '../assets/icons/ChevronUp.svg';
 import Discord from '../assets/icons/Discord.svg';
 import Github from '../assets/icons/Github.svg';
 import Linkedin from '../assets/icons/Linkedin.svg'
+import { NavLink } from 'react-router-dom';
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -20,19 +21,43 @@ const Navbar = () => {
 
   return (
     <nav className="py-4">
-      <div className="container mx-auto flex justify-between items-center">
+      <div className="w-full flex justify-between items-center">
         {/* Logo */}
         <div className="flex items-center text-[18px] md:text-[22px] font-bold text-white">
-          <img src={Logo} alt="Logo" className='w-[20px] h-[20px] md:w-[20px] md:h-[24px] mr-2'/>
+          <img src={Logo} alt="Logo" className='w-[20px] h-[20px] md:w-[20px] md:h-[24px] mr-2' />
           <span>JTareen</span>
         </div>
 
         {/* Desktop Menu */}
         <div className="hidden sm:flex text-[16px] md:text-[20px] font-medium items-center text-gray space-x-6">
-          <a href="#home" className="hover:text-white"><span className='text-primary text-[18px]'>#</span>home</a>
-          <a href="#works" className="hover:text-white"><span className='text-primary text-[18px]'>#</span>works</a>
-          <a href="#about" className="hover:text-white"><span className='text-primary text-[18px]'>#</span>about-me</a>
-          <a href="#contact" className="hover:text-white"><span className='text-primary text-[18px]'>#</span>contact</a>
+          <NavLink to="/" onClick={() => setMenuOpen(!menuOpen)}
+            className={({ isActive }) =>
+              `hover:text-white ${isActive ? 'text-white' : 'block text-gray'}`
+            }
+          >
+            <span className='text-primary'>#</span>home
+          </NavLink>
+          <NavLink to="/works" onClick={() => setMenuOpen(!menuOpen)}
+            className={({ isActive }) =>
+              `hover:text-white ${isActive ? 'text-white' : 'block text-gray'}`
+            }
+          >
+            <span className='text-primary'>#</span>works
+          </NavLink>
+          <NavLink to="/aboutme" onClick={() => setMenuOpen(!menuOpen)}
+            className={({ isActive }) =>
+              `hover:text-white ${isActive ? 'text-white' : 'block text-gray'}`
+            }
+          >
+            <span className='text-primary'>#</span>about-me
+          </NavLink>
+          <NavLink to="/contact" onClick={() => setMenuOpen(!menuOpen)}
+            className={({ isActive }) =>
+              `hover:text-white ${isActive ? 'text-white' : 'block text-gray'}`
+            }
+          >
+            <span className='text-primary'>#</span>contact
+          </NavLink>
 
           {/* Language Dropdown */}
           <div className="relative">
@@ -80,10 +105,35 @@ const Navbar = () => {
       {/* Mobile Dropdown Menu */}
       {menuOpen && (
         <div className="sm:hidden mt-4 text-gray text-[24px] space-y-2 px-4">
-          <a href="#home" className="block hover:text-white"><span className='text-primary'>#</span>home</a>
-          <a href="#works" className="block hover:text-white"><span className='text-primary'>#</span>works</a>
-          <a href="#about" className="block hover:text-white"><span className='text-primary'>#</span>about-me</a>
-          <a href="#contact" className="block hover:text-white"><span className='text-primary'>#</span>contact</a>
+          <NavLink to="/" onClick={() => setMenuOpen(!menuOpen)}
+            className={({ isActive }) =>
+              `block hover:text-white ${isActive ? 'text-white' : 'block text-gray'}`
+            }
+          >
+            <span className='text-primary'>#</span>home
+          </NavLink>
+          <NavLink to="/works" onClick={() => setMenuOpen(!menuOpen)}
+            className={({ isActive }) =>
+              `block hover:text-white ${isActive ? 'text-white' : 'block text-gray'}`
+            }
+          >
+            <span className='text-primary'>#</span>works
+          </NavLink>
+          <NavLink to="/aboutme" onClick={() => setMenuOpen(!menuOpen)}
+            className={({ isActive }) =>
+              `block hover:text-white ${isActive ? 'text-white' : 'block text-gray'}`
+            }
+          >
+            <span className='text-primary'>#</span>about-me
+          </NavLink>
+          <NavLink to="/contact" onClick={() => setMenuOpen(!menuOpen)}
+            className={({ isActive }) =>
+              `block hover:text-white ${isActive ? 'text-white' : 'block text-gray'}`
+            }
+          >
+            <span className='text-primary'>#</span>contact
+          </NavLink>
+
           {/* Language Dropdown */}
           <div className="relative size-fit">
             <button

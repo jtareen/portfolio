@@ -1,4 +1,7 @@
 @import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 
 @theme {
@@ -10,6 +13,19 @@
   --font-fira-code: FiraCode, monospace;
 }
 
+@layer components {
+  .btn {
+    @apply cursor-pointer px-4 py-2 border font-medium transition duration-200;
+  }
+
+  .btn-primary {
+    @apply text-white border-primary hover:bg-[#C778DD44];
+  }
+
+  .btn-secondary {
+    @apply text-gray border-gray hover:bg-[#ABB2BF44];
+  }
+}
 
 
   /* Only your 4 colors
