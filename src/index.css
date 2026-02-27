@@ -3,6 +3,9 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  scroll-behavior: smooth;
+}
 
 @theme {
   --color-primary: oklch(0.6947 0.164 318.63);

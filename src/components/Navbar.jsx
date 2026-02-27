@@ -20,7 +20,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="py-4">
+    <nav className="sticky top-0 z-50 bg-background py-4 px-4 md:px-20 lg:px-30 xl:px-40">
       <div className="w-full flex justify-between items-center">
         {/* Logo */}
         <div className="flex items-center text-[18px] md:text-[22px] font-bold text-white">
@@ -32,37 +32,30 @@ const Navbar = () => {
         <div className="hidden sm:flex text-[16px] md:text-[20px] font-medium items-center text-gray space-x-6">
           <NavLink to="/" onClick={() => setMenuOpen(!menuOpen)}
             className={({ isActive }) =>
-              `hover:text-white ${isActive ? 'text-white' : 'block text-gray'}`
+              `hover:text-white transition-colors ${isActive ? 'text-white' : 'block text-gray'}`
             }
           >
             <span className='text-primary'>#</span>home
           </NavLink>
-          <NavLink to="/works" onClick={() => setMenuOpen(!menuOpen)}
+          <NavLink to="/projects" onClick={() => setMenuOpen(!menuOpen)}
             className={({ isActive }) =>
-              `hover:text-white ${isActive ? 'text-white' : 'block text-gray'}`
+              `hover:text-white transition-colors ${isActive ? 'text-white' : 'block text-gray'}`
             }
           >
-            <span className='text-primary'>#</span>works
+            <span className='text-primary'>#</span>projects
           </NavLink>
           <NavLink to="/aboutme" onClick={() => setMenuOpen(!menuOpen)}
             className={({ isActive }) =>
-              `hover:text-white ${isActive ? 'text-white' : 'block text-gray'}`
+              `hover:text-white transition-colors ${isActive ? 'text-white' : 'block text-gray'}`
             }
           >
             <span className='text-primary'>#</span>about-me
-          </NavLink>
-          <NavLink to="/contact" onClick={() => setMenuOpen(!menuOpen)}
-            className={({ isActive }) =>
-              `hover:text-white ${isActive ? 'text-white' : 'block text-gray'}`
-            }
-          >
-            <span className='text-primary'>#</span>contact
           </NavLink>
 
           {/* Language Dropdown */}
           <div className="relative">
             <button
-              className="flex cursor-pointer items-center space-x-1 text-[16px] font-semibold hover:text-white"
+              className="flex cursor-pointer items-center space-x-1 text-[16px] font-semibold hover:text-white transition-colors"
               onClick={() => setLangOpen(!langOpen)}
             >
               <span>{selectedLanguage}</span>
@@ -74,16 +67,10 @@ const Navbar = () => {
             {langOpen && (
               <div className="absolute right-0 mt-2 bg-background border border-white z-10">
                 <button
-                  className="block cursor-pointer px-4 py-2 hover:bg-muted hover:text-white w-full text-left"
+                  className="block cursor-pointer px-4 py-2 hover:bg-muted hover:text-white w-full text-left transition-colors"
                   onClick={() => selectLanguage('EN')}
                 >
                   EN
-                </button>
-                <button
-                  className="block cursor-pointer px-4 py-2 hover:bg-muted hover:text-white w-full text-left"
-                  onClick={() => selectLanguage('RU')}
-                >
-                  RU
                 </button>
               </div>
             )}
@@ -104,40 +91,33 @@ const Navbar = () => {
 
       {/* Mobile Dropdown Menu */}
       {menuOpen && (
-        <div className="sm:hidden mt-4 text-gray text-[24px] space-y-2 px-4">
+        <div className="sm:hidden mt-4 text-gray text-[24px] space-y-2 px-4 h-screen bg-background">
           <NavLink to="/" onClick={() => setMenuOpen(!menuOpen)}
             className={({ isActive }) =>
-              `block hover:text-white ${isActive ? 'text-white' : 'block text-gray'}`
+              `block hover:text-white transition-colors ${isActive ? 'text-white' : 'block text-gray'}`
             }
           >
             <span className='text-primary'>#</span>home
           </NavLink>
-          <NavLink to="/works" onClick={() => setMenuOpen(!menuOpen)}
+          <NavLink to="/projects" onClick={() => setMenuOpen(!menuOpen)}
             className={({ isActive }) =>
-              `block hover:text-white ${isActive ? 'text-white' : 'block text-gray'}`
+              `block hover:text-white transition-colors ${isActive ? 'text-white' : 'block text-gray'}`
             }
           >
-            <span className='text-primary'>#</span>works
+            <span className='text-primary'>#</span>projects
           </NavLink>
           <NavLink to="/aboutme" onClick={() => setMenuOpen(!menuOpen)}
             className={({ isActive }) =>
-              `block hover:text-white ${isActive ? 'text-white' : 'block text-gray'}`
+              `block hover:text-white transition-colors ${isActive ? 'text-white' : 'block text-gray'}`
             }
           >
             <span className='text-primary'>#</span>about-me
-          </NavLink>
-          <NavLink to="/contact" onClick={() => setMenuOpen(!menuOpen)}
-            className={({ isActive }) =>
-              `block hover:text-white ${isActive ? 'text-white' : 'block text-gray'}`
-            }
-          >
-            <span className='text-primary'>#</span>contact
           </NavLink>
 
           {/* Language Dropdown */}
           <div className="relative size-fit">
             <button
-              className="flex cursor-pointer items-center space-x-1 text-[24px] font-semibold hover:text-white"
+              className="flex cursor-pointer items-center space-x-1 text-[24px] font-semibold hover:text-white transition-colors"
               onClick={() => setLangOpen(!langOpen)}
             >
               <span>{selectedLanguage}</span>
@@ -149,13 +129,13 @@ const Navbar = () => {
             {langOpen && (
               <div className="absolute right-0 mt-2 bg-background border border-white z-10">
                 <button
-                  className="block cursor-pointer px-4 py-2 hover:text-white w-full text-left"
+                  className="block cursor-pointer px-4 py-2 hover:text-white w-full text-left transition-colors"
                   onClick={() => selectLanguage('EN')}
                 >
                   EN
                 </button>
                 <button
-                  className="block cursor-pointer px-4 py-2 hover:text-white w-full text-left"
+                  className="block cursor-pointer px-4 py-2 hover:text-white w-full text-left transition-colors"
                   onClick={() => selectLanguage('RU')}
                 >
                   RU
@@ -163,7 +143,7 @@ const Navbar = () => {
               </div>
             )}
           </div>
-          <div className='flex justify-center mt-[200px]'>
+          <div className='flex justify-center mt-[100px]'>
             <button><img src={Linkedin} alt="Linkedin" className='w-[44px] h-[44px] m-2 cursor-pointer' /></button>
             <button><img src={Github} alt="Github" className='w-[44px] h-[44px] m-2 cursor-pointer' /></button>
             <button><img src={Discord} alt='Discord' className='w-[44px] h-[44px] m-2 cursor-pointer' /></button>
