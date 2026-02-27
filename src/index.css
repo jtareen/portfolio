@@ -29,21 +29,3 @@ html {
     @apply text-gray border-gray hover:bg-[#ABB2BF44];
   }
 }
-
-
-  /* Only your 4 colors
-  
-
-  Optional: keep these for layout consistency
-  --radius-selector: 0rem;
-  --radius-field: 0rem;
-  --radius-box: 0rem;
-
-  --size-selector: 0.25rem;
-  --size-field: 0.25rem;
-
-  --border: 1px;
-
-  --depth: 1;
-  --noise: 0; */
-
