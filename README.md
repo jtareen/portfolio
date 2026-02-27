@@ -44,48 +44,77 @@ This repository contains two main directories:
 
 ## 💻 Local Development Setup
 
-To get a local copy up and running, follow these steps.
+Follow the steps below to run the project locally on your machine.
 
-### Prerequisites
-* [Node.js](https://nodejs.org/) installed on your machine
-* A [Sanity](https://www.sanity.io/) account
-* An [EmailJS](https://www.emailjs.com/) account
+---
 
-### 1. Clone the repository
-\`\`\`bash
+### ✅ Prerequisites
+
+Make sure you have the following installed or set up:
+
+* **Node.js** (LTS recommended)
+* A **Sanity** account
+* An **EmailJS** account
+
+---
+
+### 1. Clone the Repository
+
+```bash
 git clone https://github.com/jtareen/portfolio
 cd portfolio
-\`\`\`
+```
+
+---
 
 ### 2. Frontend Setup
-Install the dependencies for the React app:
-\`\`\`bash
-npm install
-\`\`\`
 
-Create a `.env` file in the root directory and add your EmailJS keys:
-\`\`\`env
+Install project dependencies:
+
+```bash
+npm install
+```
+
+---
+
+### 3. Environment Variables
+
+Create a `.env` file in the project root and add your EmailJS credentials:
+
+```env
 VITE_EMAILJS_SERVICE_ID=your_service_id
 VITE_EMAILJS_TEMPLATE_ID=your_template_id
 VITE_EMAILJS_PUBLIC_KEY=your_public_key
-\`\`\`
+```
+
+---
+
+### 4. Run the Development Server
 
 Start the Vite development server:
-\`\`\`bash
-npm run dev
-\`\`\`
 
-### 3. Sanity Studio Setup
+```bash
+npm run dev
+```
+
+Once running, the app will be available at:
+
+```
+http://localhost:5173
+```
+
+
+### 5. Sanity Studio Setup
 Open a new terminal window, navigate to the studio folder, and install its dependencies:
-\`\`\`bash
+```bash
 cd studio
 npm install
-\`\`\`
+```
 
 Start the Sanity Studio locally:
-\`\`\`bash
+```bash
 npm run dev
-\`\`\`
+```
 *(The studio will typically run on `http://localhost:3333`)*
 
 ---
